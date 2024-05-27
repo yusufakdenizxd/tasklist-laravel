@@ -8,10 +8,10 @@ Route::get('/', function () {
 
 Route::get('/hello', function () {
     return 'Hello World';
-});
+})->name('hello');
 
 Route::get('/merhaba', function () {
-    return redirect('/hello');
+    return redirect()->route('hello');
 });
 
 Route::get('/greetings/{name}', function ($name) {
