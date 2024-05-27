@@ -17,3 +17,7 @@ Route::get('/merhaba', function () {
 Route::get('/greetings/{name}', function ($name) {
     return 'Greetings ' . $name;
 });
+
+Route::fallback(function () {
+    return '404';
+});
